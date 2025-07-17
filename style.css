@@ -1,0 +1,75 @@
+:root {
+  /* color palette */
+  --background-color: #363636;
+  --card-color: #817e7e;
+  --primary-color: ##9B86AA;
+  --text: #ffffff;
+
+  &.light {
+    --background-color: #f0f0f0;
+    --card-color: #d9cdea;
+    --primary-color: #DDADFF;
+    --text: #1c1c1c;
+  }
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text);
+  height: 2500px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #4e4356;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  align-items: center;
+  z-index: 1000;
+  height: 100px;
+  width: 150%;
+  margin-left: -25%;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+
+  &.scrolled {
+    background-color: #a147e1;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  transition: padding 0.3s ease,
+  background-color 0.3s ease,
+  box-shadow 0.3s ease;
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 0.5em 1em;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: black;
+  background: var(--primary-color);
+}
+
+section {
+  margin: 2.5rem auto;
+  max-width: 1200px;
+  padding: 2.5rem 3rem;
+  background: var(--card-color);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.5);
+}
