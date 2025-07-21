@@ -1,16 +1,7 @@
 :root {
-  /* color palette */
-  /* --background-color: #302c3eff; */
-  /* --card-color: #3e3743; */
   --primary-color: #e9daff;
+  --primary-color-rgb: 233, 218, 255;
   --text: #ffffff;
-
-  /* &.light {
-    --background-color: #f0f0f0;
-    --card-color: #d9cdea;
-    --primary-color: #DDADFF;
-    --text: #1c1c1c;
-  } */
 }
 
 html {
@@ -21,12 +12,14 @@ html {
 }
 
 body {
-  /* background-color: var(--background-color); */
   background: linear-gradient(135deg, #302c3eff, #4e4356);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: 400% 400%;
   animation: gradient 30s ease infinite;
   color: var(--text);
-  height: 2500px;
+  /* height: 2500px; */
+  padding-bottom: 100px;
 
   overflow-x: hidden;
   font-family: 'Nunito';
@@ -81,23 +74,23 @@ nav a {
   border-radius: 20px;
   padding: 0.5em 1em;
   transition: background 0.2s, color 0.2s;
+
+  &:hover,
+  &:focus {
+    color: black;
+    background: var(--primary-color);
+  }
 }
 
 header h1 {
   color: var(--primary-color)
 }
 
-nav a:hover,
-nav a:focus {
-  color: black;
-  background: var(--primary-color);
-}
-
 section {
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   max-width: 1200px;
   padding: 1.5rem 3rem;
-  background: color(255, 255, 255, 0.1);
+  background: rgb(174, 143, 152, 0.1);
   backdrop-filter: blur(50px);
   /* border-radius: 18px; */
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.5);
@@ -113,4 +106,21 @@ section {
 .link {
   text-decoration: none;
   color: var(--primary-color);
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  background: var(--primary-color);
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(var(--primary-color-rgb), 0);
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px 0 rgba(var(--primary-color-rgb), 0.8);
+  }
 }
