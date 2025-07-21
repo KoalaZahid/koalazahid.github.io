@@ -2,7 +2,7 @@
   /* color palette */
   --background-color: #363636;
   --card-color: #817e7e;
-  --primary-color: ##9B86AA;
+  --primary-color: #9B86AA;
   --text: #ffffff;
 
   &.light {
