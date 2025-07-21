@@ -1,11 +1,11 @@
 // Dark Mode Toggle
-document.querySelector(".day-night input").addEventListener("change", () => {
+// document.querySelector(".day-night input").addEventListener("change", () => {
 
-  setTimeout(() => { // delays for 5ms
-    document.querySelector(":root").classList.toggle("light");
-  }, 5);
+//   setTimeout(() => { // delays for 5ms
+//     document.querySelector(":root").classList.toggle("light");
+//   }, 5);
 
-});
+// });
 
 // Header Scroll effect
 const header = document.getElementById("site-header");

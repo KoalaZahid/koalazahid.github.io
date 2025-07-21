@@ -1,16 +1,16 @@
 :root {
   /* color palette */
-  --background-color: #363636;
-  --card-color: #817e7e;
-  --primary-color: #9B86AA;
+  /* --background-color: #302c3eff; */
+  /* --card-color: #3e3743; */
+  --primary-color: #e9daff;
   --text: #ffffff;
 
-  &.light {
+  /* &.light {
     --background-color: #f0f0f0;
     --card-color: #d9cdea;
     --primary-color: #DDADFF;
     --text: #1c1c1c;
-  }
+  } */
 }
 
 html {
@@ -21,9 +21,29 @@ html {
 }
 
 body {
-  background-color: var(--background-color);
-  /* color: var(--text); */
+  /* background-color: var(--background-color); */
+  background: linear-gradient(135deg, #302c3eff, #4e4356);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+  color: var(--text);
   height: 2500px;
+
+  overflow-x: hidden;
+  font-family: 'Nunito';
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
@@ -35,13 +55,17 @@ header {
   text-align: center;
   align-items: center;
   z-index: 1000;
-  height: 100px;
+  height: 140px;
+
   width: 150%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
   margin-left: -25%;
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
 
   &.scrolled {
-    background-color: #a147e1;
+    background-color: #65596e;
     box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.5);
   }
 
@@ -59,6 +83,10 @@ nav a {
   transition: background 0.2s, color 0.2s;
 }
 
+header h1 {
+  color: var(--primary-color)
+}
+
 nav a:hover,
 nav a:focus {
   color: black;
@@ -66,16 +94,23 @@ nav a:focus {
 }
 
 section {
-  margin: 2.5rem auto;
+  margin: 1rem auto;
   max-width: 1200px;
-  padding: 2.5rem 3rem;
-  background: var(--card-color);
-  border-radius: 18px;
+  padding: 1.5rem 3rem;
+  background: color(255, 255, 255, 0.1);
+  backdrop-filter: blur(50px);
+  /* border-radius: 18px; */
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.5);
   color: var(--text);
 }
 
-section h2 {
+.section-title {
   color: var(--primary-color);
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--primary-color);
 }
